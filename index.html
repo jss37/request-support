@@ -14,10 +14,29 @@
             text-decoration-skip: none;
 
         }
+        
+        }
+        .underline-through {
+    text-decoration-line: none; /* Remove the default underline */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underline-through:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4.5vw; /* Adjust this value to control the distance of the underline from text */
+    width: 100%;
+    height: .5vw; /* Adjust this value to control the thickness of the underline */
+    background-color: black;
+    border: .2vw solid #CAEFB0; 
+    z-index: -1; 
+  }
     </style>
 </head>
 <body>
-    <h2 style="margin-left:10vw;font-size:9vw;margin-top:4vw;font-style:italic;"><u>Request Support On</u></h1>
+    <h<h2 style="margin-left:10vw;font-size:9vw;margin-top:4vw;font-style:italic;"><span class="underline-through">Request Support On</span></h1>
     <h2 style="margin-left:10vw;font-size:4vw;">Design <span style="margin-left:12vw;">Data</span><span style="margin-left:13vw;">Stats</span> <span style="margin-left:13vw;">Viz</span></h1>
     <img src="warehouse.png" style="position: absolute;bottom:0;width:99%;height:40vw;">
 </body>
